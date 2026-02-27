@@ -1,4 +1,4 @@
-from dataset.structural.structure.abstract_planar_truss import *
+from Flamant.dataset.structural.structure.abstract_planar_truss import *
 
 
 class DummyTruss(AbstractPlanarTruss):

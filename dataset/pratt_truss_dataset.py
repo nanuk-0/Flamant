@@ -3,7 +3,7 @@ from typing import List, Callable
 import numpy as np
 import torch
 
-from dataset import AbstractHDF5Dataset
+from Flamant.dataset import AbstractHDF5Dataset
 import h5py
 
 

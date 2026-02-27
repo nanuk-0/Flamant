@@ -10,8 +10,8 @@ import numpy as np
 import yaml
 import os
 
-from dataset.structural.analysis import AbstractAnalysis, LinearAnalysis
-from dataset.structural.structure import AbstractStructure
+from Flamant.dataset.structural.analysis import AbstractAnalysis, LinearAnalysis
+from Flamant.dataset.structural.structure import AbstractStructure
 
 
 class ConfigDict(TypedDict, total=False):

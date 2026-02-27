@@ -2,9 +2,9 @@ import numpy as np
 import re
 from typing import Dict
 
-from dataset.structural.analysis import LinearAnalysis
-from dataset.structural.structure import DummyTruss
-from dataset.generator.abstract_truss_generator import AbstractTrussGenerator
+from Flamant.dataset.structural.analysis import LinearAnalysis
+from Flamant.dataset.structural.structure import DummyTruss
+from Flamant.dataset.generator.abstract_truss_generator import AbstractTrussGenerator
 
 
 class DummyTrussGenerator(AbstractTrussGenerator):
