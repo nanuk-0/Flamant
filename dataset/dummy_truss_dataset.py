@@ -49,6 +49,7 @@ class DummyTrussDataset(AbstractHDF5Dataset):
         self.connectivity_matrix = self.connectivity_matrix.reshape((-1, self.n_elems, 2))
 
         # Noise application
+        # using passed lambda function to create noise arrays of size .shape
         self.noise_bars_length_init = self.f_noise_length(self.bars_length_init.shape)
         self.noise_nodes_displacement = self.f_noise_displacement(self.nodes_displacement.shape)
         self.noise_load = self.f_noise_loads(self.external_load.shape)
@@ -65,6 +66,8 @@ class DummyTrussDataset(AbstractHDF5Dataset):
         data_3 = self.bars_strain[idx] * self.noise_bars_strain[idx]
 
         data = np.hstack([data_1, data_2, data_3])
+        #data = np.hstack([data_2, data_3])#, data_3])
+
 
         data = torch.tensor(data, dtype=self.dtype)
         target = torch.tensor(self.bars_area[idx] * self.bars_young[idx], dtype=self.dtype)
